@@ -1,59 +1,46 @@
-function abrirInvitacion() {
-    document.querySelector('.hero').style.display = 'none';
-    document.getElementById('contenido').style.display = 'block';
+document.addEventListener("DOMContentLoaded", () => {
 
-    const musica = document.getElementById('bgMusic');
+    const boton = document.getElementById("openInvitation");
 
-    if (musica) {
-        musica.play().catch(() => {
-            console.log("El navegador requiere interacción del usuario");
+    if (boton) {
+        boton.addEventListener("click", () => {
+
+            document.querySelector(".hero").style.display = "none";
+            document.getElementById("contenido").style.display = "block";
+
+            const musica = document.getElementById("music");
+
+            if (musica) {
+                musica.play().catch(() => {});
+            }
+
+            window.scrollTo(0, 0);
+
         });
     }
-}
 
-const fechaEvento = new Date("October 3, 2026 18:00:00").getTime();
+    const fechaEvento = new Date("2026-10-03T18:00:00").getTime();
 
-const contador = setInterval(() => {
+    setInterval(() => {
 
-    const ahora = new Date().getTime();
+        const ahora = new Date().getTime();
+        const diferencia = fechaEvento - ahora;
 
-    const distancia = fechaEvento - ahora;
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
-    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+        const d = document.getElementById("days");
+        const h = document.getElementById("hours");
+        const m = document.getElementById("minutes");
+        const s = document.getElementById("seconds");
 
-    const horas = Math.floor(
-        (distancia % (1000 * 60 * 60 * 24)) /
-        (1000 * 60 * 60)
-    );
+        if (d) d.textContent = dias;
+        if (h) h.textContent = horas;
+        if (m) m.textContent = minutos;
+        if (s) s.textContent = segundos;
 
-    const minutos = Math.floor(
-        (distancia % (1000 * 60 * 60)) /
-        (1000 * 60)
-    );
+    }, 1000);
 
-    const segundos = Math.floor(
-        (distancia % (1000 * 60)) /
-        1000
-    );
-
-    const d = document.getElementById("dias");
-    const h = document.getElementById("horas");
-    const m = document.getElementById("minutos");
-    const s = document.getElementById("segundos");
-
-    if (d) d.innerHTML = dias;
-    if (h) h.innerHTML = horas;
-    if (m) m.innerHTML = minutos;
-    if (s) s.innerHTML = segundos;
-
-    if (distancia < 0) {
-
-        clearInterval(contador);
-
-        if (d) d.innerHTML = "0";
-        if (h) h.innerHTML = "0";
-        if (m) m.innerHTML = "0";
-        if (s) s.innerHTML = "0";
-    }
-
-}, 1000);
+});
