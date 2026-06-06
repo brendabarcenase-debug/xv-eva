@@ -1,23 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const boton = document.getElementById("openInvitation");
+    const musica = document.getElementById("music");
 
-    if (boton) {
-        boton.addEventListener("click", () => {
+    boton.addEventListener("click", async () => {
 
-            document.querySelector(".hero").style.display = "none";
-            document.getElementById("contenido").style.display = "block";
+        document.querySelector(".hero").style.display = "none";
+        document.getElementById("contenido").style.display = "block";
 
-            const musica = document.getElementById("music");
+        try {
+            musica.currentTime = 0;
+            musica.volume = 0.35; // volumen al 35%
+            await musica.play();
+            console.log("🎵 Música reproduciéndose");
+        } catch (error) {
+            console.error("No se pudo reproducir:", error);
+        }
 
-            if (musica) {
-                musica.play().catch(() => {});
-            }
+        iniciarContador();
 
-            window.scrollTo(0, 0);
+    });
 
-        });
-    }
+});
+
+function iniciarContador(){
 
     const fechaEvento = new Date("2026-10-03T18:00:00").getTime();
 
@@ -26,21 +32,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const ahora = new Date().getTime();
         const diferencia = fechaEvento - ahora;
 
-        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+        document.getElementById("days").textContent =
+            Math.floor(diferencia/(1000*60*60*24));
 
-        const d = document.getElementById("days");
-        const h = document.getElementById("hours");
-        const m = document.getElementById("minutes");
-        const s = document.getElementById("seconds");
+        document.getElementById("hours").textContent =
+            Math.floor((diferencia%(1000*60*60*24))/(1000*60*60));
 
-        if (d) d.textContent = dias;
-        if (h) h.textContent = horas;
-        if (m) m.textContent = minutos;
-        if (s) s.textContent = segundos;
+        document.getElementById("minutes").textContent =
+            Math.floor((diferencia%(1000*60*60))/(1000*60));
 
-    }, 1000);
+        document.getElementById("seconds").textContent =
+            Math.floor((diferencia%(1000*60))/1000);
 
-});
+    },1000);
+
+}
