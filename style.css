@@ -198,23 +198,41 @@ button:hover,
 }
 
 #countdown{
+
     display:flex;
+
     justify-content:center;
-    gap:20px;
+
     flex-wrap:wrap;
+
+    gap:25px;
+
+    margin-top:35px;
+
 }
 
 #countdown div{
 
-    background:white;
+    width:120px;
+    height:120px;
 
-    padding:30px;
+    border-radius:50%;
 
-    border-radius:28px;
+    background:rgba(255,255,255,.75);
 
-    min-width:120px;
+    backdrop-filter:blur(10px);
 
-    box-shadow:var(--sombra);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.10),
+        inset 0 0 0 2px rgba(255,255,255,.45);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
 
     transition:.35s;
 
@@ -226,10 +244,13 @@ button:hover,
 }
 
 #countdown span{
-    display:block;
-    font-size:32px;
-    font-weight:bold;
+
+    font-size:42px;
+
+    font-weight:700;
+
     color:#c78a98;
+
 }
 
 .passes{
@@ -456,5 +477,24 @@ button:hover,
     100%{
         transform:translateY(0px);
     }
+
+}
+#countdown small{
+
+    margin-top:8px;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    color:#888;
+
+    text-transform:uppercase;
+
+}
+
+#countdown div:hover{
+
+    transform:translateY(-8px) scale(1.05);
 
 }
