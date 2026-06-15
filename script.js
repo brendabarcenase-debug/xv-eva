@@ -41,6 +41,40 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".section").forEach(section => {
     observer.observe(section);
 });
+    /*==============================
+PÉTALOS
+==============================*/
+
+const petals = document.getElementById("petals");
+
+function createPetal(){
+
+    const petal = document.createElement("div");
+
+    petal.classList.add("petal");
+
+    petal.style.left = Math.random()*100 + "%";
+
+    petal.style.animationDuration =
+        (6 + Math.random()*6) + "s";
+
+    petal.style.opacity =
+        .3 + Math.random()*.5;
+
+    petal.style.transform =
+        `scale(${0.5 + Math.random()})`;
+
+    petals.appendChild(petal);
+
+    setTimeout(()=>{
+
+        petal.remove();
+
+    },12000);
+
+}
+
+setInterval(createPetal,500);
 });
 
 function iniciarContador(){
