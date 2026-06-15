@@ -498,3 +498,65 @@ button:hover,
     transform:translateY(-8px) scale(1.05);
 
 }
+/*==============================
+PÉTALOS
+==============================*/
+
+#petals{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+    overflow:hidden;
+
+    z-index:999;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    top:-50px;
+
+    width:18px;
+    height:18px;
+
+    background:linear-gradient(
+        145deg,
+        #ffd9e4,
+        #f6a8bd
+    );
+
+    border-radius:70% 0 70% 0;
+
+    opacity:.75;
+
+    animation:fall linear forwards;
+
+}
+
+@keyframes fall{
+
+    from{
+
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+            translateY(110vh)
+            rotate(540deg);
+
+    }
+
+}
