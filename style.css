@@ -95,20 +95,19 @@ body{
 
 .hero-img{
 
-    width:360px;
+    width:340px;
     max-width:92%;
 
-    border-radius:30px;
+    border-radius:28px;
 
-    border:10px solid white;
+    border:8px solid rgba(255,255,255,.8);
 
     box-shadow:
+        0 25px 60px rgba(0,0,0,.18),
+        0 0 0 10px rgba(255,255,255,.35);
 
-        0 30px 70px rgba(0,0,0,.15),
+    animation:float 5s ease-in-out infinite;
 
-        0 10px 25px rgba(199,138,152,.25);
-
-    transition:.5s;
 }
 .hero-img:hover{
 
@@ -442,5 +441,20 @@ button:hover,
     transform:translateY(0);
 
     transition:1s;
+
+}
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
 
 }
