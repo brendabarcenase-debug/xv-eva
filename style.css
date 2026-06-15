@@ -560,3 +560,158 @@ PÉTALOS
     }
 
 }
+/*==================================
+PORTADA V2
+===================================*/
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,
+    #fffdfb 0%,
+    #fdf3f6 45%,
+    #f6e4ea 100%);
+
+    padding:50px 20px;
+}
+
+.hero-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,255,255,.35),
+    transparent 70%);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+}
+
+.subtitle{
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#9d8a84;
+
+    font-size:15px;
+
+    margin-bottom:18px;
+
+}
+
+.hero h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:110px;
+
+    color:#c9959f;
+
+    margin-bottom:10px;
+
+}
+
+.event-date{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:28px;
+
+    letter-spacing:3px;
+
+    color:#6f6460;
+
+    margin-bottom:35px;
+
+}
+
+.hero-img{
+
+    width:360px;
+
+    max-width:92%;
+
+    border-radius:28px;
+
+    border:10px solid rgba(255,255,255,.92);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.15);
+
+    margin-bottom:35px;
+
+    transition:.5s;
+
+}
+
+.hero-img:hover{
+
+    transform:scale(1.02);
+
+}
+
+.hero-quote{
+
+    max-width:520px;
+
+    margin:0 auto 35px;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    font-style:italic;
+
+    color:#6b625f;
+
+}
+
+#openInvitation{
+
+    padding:18px 50px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #d4a4af,
+        #c88d97);
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 15px 35px rgba(200,141,151,.35);
+
+    transition:.35s;
+
+}
+
+#openInvitation:hover{
+
+    transform:translateY(-4px);
+
+}
