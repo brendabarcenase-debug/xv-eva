@@ -295,3 +295,152 @@ h3{
         min-width:80px;
     }
 }
+/*=========================
+  FONDOS DECORATIVOS
+==========================*/
+
+body{
+    background:
+    radial-gradient(circle at top,#fff,#f8eef1 45%,#f4e4e8 100%);
+}
+
+/* Flores decorativas */
+
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    width:420px;
+    height:420px;
+    opacity:.08;
+    z-index:-1;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+body::before{
+    top:-80px;
+    left:-120px;
+    background-image:url("img/flores-esquina.png");
+}
+
+body::after{
+    bottom:-100px;
+    right:-120px;
+    transform:rotate(180deg);
+    background-image:url("img/flores-esquina.png");
+}
+
+/*=========================
+  TARJETAS
+==========================*/
+
+.section{
+
+    background:white;
+
+    margin:50px auto;
+
+    border-radius:30px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+    padding:70px 40px;
+
+    transition:.5s;
+}
+
+.section:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
+
+}
+
+/*=========================
+  TITULOS
+==========================*/
+
+.section h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    color:#c78a98;
+
+    margin-bottom:20px;
+
+}
+
+.section p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+/*=========================
+  BOTONES
+==========================*/
+
+button,.btn{
+
+    background:linear-gradient(
+        45deg,
+        #c78a98,
+        #d8a7b3
+    );
+
+    box-shadow:0 10px 25px rgba(199,138,152,.35);
+
+}
+
+button:hover,
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 20px 35px rgba(199,138,152,.45);
+
+}
+
+/*=========================
+  GALERIA
+==========================*/
+
+.gallery img{
+
+    transition:.45s;
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.06);
+
+}
+
+/*=========================
+  APARECER AL HACER SCROLL
+==========================*/
+
+.section{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+.section.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:1s;
+
+}
