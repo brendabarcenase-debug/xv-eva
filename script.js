@@ -20,7 +20,27 @@ document.addEventListener("DOMContentLoaded", () => {
         iniciarContador();
 
     });
+/*==============================
+ANIMACIÓN AL HACER SCROLL
+==============================*/
 
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+document.querySelectorAll(".section").forEach(section => {
+    observer.observe(section);
+});
 });
 
 function iniciarContador(){
