@@ -923,3 +923,55 @@ TARJETAS
     margin:10px 0;
 
 }
+.gallerySwiper{
+
+    width:100%;
+
+    margin-top:40px;
+
+    padding-bottom:60px;
+
+}
+
+.gallerySwiper img{
+
+    width:100%;
+
+    max-width:450px;
+
+    display:block;
+
+    margin:auto;
+
+    border-radius:28px;
+
+    box-shadow:0 18px 50px rgba(0,0,0,.12);
+
+    cursor:pointer;
+
+}
+
+.gallery-text{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:22px;
+
+    color:#857872;
+
+    margin-top:15px;
+
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+
+    color:#c9959f;
+
+}
+
+.swiper-pagination-bullet-active{
+
+    background:#c9959f;
+
+}
