@@ -715,3 +715,87 @@ PORTADA V2
     transform:translateY(-4px);
 
 }
+/*==================================
+BIENVENIDA
+==================================*/
+
+.welcome{
+
+    text-align:center;
+
+}
+
+.lead{
+
+    font-size:24px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#8a6f67;
+
+    margin-bottom:25px;
+
+}
+
+.section-divider{
+
+    width:80px;
+
+    height:2px;
+
+    background:#d7b4bc;
+
+    margin:30px auto;
+
+    border-radius:10px;
+
+}
+
+/*==================================
+INVITACIÓN
+==================================*/
+
+.invitation-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:55px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.08);
+
+}
+
+.invitation-card p{
+
+    font-size:20px;
+
+    line-height:2;
+
+}
+
+.signature{
+
+    margin-top:35px;
+
+    font-style:italic;
+
+}
+
+.invitation-card h3{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:60px;
+
+    color:#c9959f;
+
+    margin-top:15px;
+
+}
