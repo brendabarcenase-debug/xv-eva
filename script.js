@@ -75,6 +75,42 @@ function createPetal(){
 }
 
 setInterval(createPetal,500);
+    const swiper = new Swiper(".gallerySwiper",{
+
+    loop:true,
+
+    centeredSlides:true,
+
+    spaceBetween:30,
+
+    autoplay:{
+        delay:3500,
+        disableOnInteraction:false
+    },
+
+    pagination:{
+        el:".swiper-pagination",
+        clickable:true
+    },
+
+    navigation:{
+        nextEl:".swiper-button-next",
+        prevEl:".swiper-button-prev"
+    },
+
+    breakpoints:{
+
+        768:{
+            slidesPerView:2
+        },
+
+        1024:{
+            slidesPerView:3
+        }
+
+    }
+
+});
 });
 
 function iniciarContador(){
