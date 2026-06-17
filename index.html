@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -325,20 +328,54 @@ a una noche inolvidable.
         <!-- Galería -->
         <section class="section">
 
-            <h2>Mi Historia</h2>
+    <h2>Mi Historia</h2>
 
-            <div class="gallery">
+    <p class="gallery-text">
 
+        Cada fotografía guarda un recuerdo que
+        me ha acompañado hasta este momento.
+
+    </p>
+
+    <div class="swiper gallerySwiper">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
                 <img src="img/foto1.jpg" alt="">
-                <img src="img/foto2.jpg" alt="">
-                <img src="img/foto3.jpg" alt="">
-                <img src="img/foto4.png" alt="">
-                <img src="img/foto5.png" alt="">
-                <img src="img/foto6.jpg" alt="">
-
             </div>
 
-        </section>
+            <div class="swiper-slide">
+                <img src="img/foto2.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="img/foto3.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="img/foto4.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="img/foto5.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="img/foto6.jpg" alt="">
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+
+        <div class="swiper-button-next"></div>
+
+    </div>
+
+</section>
 
         <!-- Instagram -->
         <section class="section">
@@ -365,7 +402,7 @@ a una noche inolvidable.
         </section>
 
     </main>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 
 </body>
