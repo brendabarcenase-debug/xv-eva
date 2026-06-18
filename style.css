@@ -475,3 +475,269 @@ PORTADA
     display:none;
 
 }
+/*==================================================
+    TARJETAS PREMIUM
+==================================================*/
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:28px;
+
+    margin-top:45px;
+
+}
+
+.cards .card{
+
+    text-align:center;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.cards .card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--rose-light),
+        var(--gold),
+        var(--rose)
+    );
+
+}
+
+.cards .card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.icon{
+
+    width:78px;
+    height:78px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--rose-light),
+        #fff
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.cards h3{
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+.cards p{
+
+    margin-bottom:10px;
+
+}
+
+.cards strong{
+
+    color:var(--rose-dark);
+
+    font-size:18px;
+
+}
+
+/*==================================================
+    CUENTA REGRESIVA
+==================================================*/
+
+.countdown-section{
+
+    text-align:center;
+
+}
+
+.countdown-section p{
+
+    margin-bottom:40px;
+
+    font-size:20px;
+
+}
+
+#countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:22px;
+
+    flex-wrap:wrap;
+
+}
+
+#countdown div{
+
+    width:125px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:24px;
+
+    padding:25px 15px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+#countdown div:hover{
+
+    transform:translateY(-8px);
+
+}
+
+#countdown span{
+
+    display:block;
+
+    font-size:42px;
+
+    color:var(--rose);
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+#countdown small{
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    color:#8b7d7d;
+
+    font-size:12px;
+
+}
+
+/*==================================================
+    TARJETAS ESPECIALES
+==================================================*/
+
+.location-card,
+.dress-card,
+.gift-card,
+.invitation-card{
+
+    max-width:760px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.location-card h3,
+.dress-card h3,
+.invitation-card h3{
+
+    font-size:42px;
+
+    margin:20px 0;
+
+}
+
+.location-card p,
+.dress-card p,
+.gift-card p{
+
+    margin-bottom:20px;
+
+}
+
+.dress-icon{
+
+    font-size:60px;
+
+    margin:25px 0;
+
+}
+
+/*==================================================
+    BOTONES
+==================================================*/
+
+.btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:16px 36px;
+
+    border-radius:40px;
+
+    background:linear-gradient(
+        135deg,
+        var(--rose),
+        var(--rose-dark)
+    );
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    box-shadow:0 15px 35px rgba(201,154,166,.25);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 22px 45px rgba(201,154,166,.35);
+
+}
