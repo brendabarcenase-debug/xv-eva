@@ -1,291 +1,202 @@
-*{
+/*==================================================
+    XV AÑOS DE EVA
+    STYLE.CSS
+==================================================*/
+
+/*==============================
+RESET
+==============================*/
+
+*,
+*::before,
+*::after{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
 
 html{
+
     scroll-behavior:smooth;
+
 }
 
 body{
+
     font-family:'Montserrat',sans-serif;
-    background:#FFF8F6;
+
+    background:#FFF9F7;
+
     color:#5F5754;
-    text-align:center;
+
     overflow-x:hidden;
+
+    line-height:1.7;
+
 }
 
-/* PETALS */
-#petals{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    overflow:hidden;
-    z-index:999;
+/*==============================
+VARIABLES
+==============================*/
+
+:root{
+
+    --rose:#C99AA6;
+
+    --rose-light:#E7C7D2;
+
+    --rose-dark:#B57C8E;
+
+    --gold:#D5B28C;
+
+    --cream:#FFF9F7;
+
+    --white:#FFFFFF;
+
+    --text:#5F5754;
+
+    --shadow:0 20px 50px rgba(0,0,0,.08);
+
+    --radius:28px;
+
+    --transition:.35s ease;
+
 }
 
-.petal{
-    position:absolute;
-    top:-40px;
-    width:16px;
-    height:16px;
-    background:linear-gradient(135deg,#ffdbe7,#e9a8b8);
-    border-radius:70% 0 70% 0;
-    opacity:.75;
-    animation:fall linear forwards;
-}
+/*==============================
+TIPOGRAFÍA
+==============================*/
 
-@keyframes fall{
-    from{transform:translateY(-60px) rotate(0deg);}
-    to{transform:translateY(110vh) translateX(60px) rotate(540deg);}
-}
+h1{
 
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
-    padding:60px 20px;
-    background:linear-gradient(180deg,#fffdfc,#fdeef3);
-}
-
-.hero-overlay{
-    position:absolute;
-    inset:0;
-    background:radial-gradient(circle at top,rgba(255,255,255,.6),transparent 70%);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:720px;
-}
-
-.subtitle{
-    letter-spacing:4px;
-    text-transform:uppercase;
-    color:#967d77;
-    margin-bottom:15px;
-}
-
-.hero h1{
     font-family:'Great Vibes',cursive;
-    font-size:110px;
-    color:#c6938b;
+
 }
 
-.event-date{
+h2,
+h3{
+
     font-family:'Cormorant Garamond',serif;
-    font-size:30px;
-    margin:15px 0 35px;
+
 }
 
-.hero-img{
-    width:360px;
-    max-width:92%;
-    border-radius:28px;
-    border:10px solid #fff;
-    box-shadow:0 25px 60px rgba(0,0,0,.12);
-    margin-bottom:30px;
+p{
+
+    font-size:17px;
+
+    color:var(--text);
+
 }
 
-.hero-quote{
-    max-width:540px;
-    margin:0 auto 35px;
-    font-family:'Cormorant Garamond',serif;
-    font-size:28px;
-    font-style:italic;
-    line-height:1.6;
+/*==============================
+FONDO
+==============================*/
+
+body{
+
+    background:
+
+    radial-gradient(circle at top left,
+    rgba(255,240,245,.6),
+    transparent 30%),
+
+    radial-gradient(circle at bottom right,
+    rgba(255,230,235,.6),
+    transparent 35%),
+
+    var(--cream);
+
 }
 
-button,.btn{
-    display:inline-block;
-    border:none;
-    border-radius:40px;
-    padding:16px 40px;
-    background:linear-gradient(135deg,#d8a8b8,#c6938b);
-    color:#fff;
-    text-decoration:none;
-    cursor:pointer;
-    transition:.35s;
-    box-shadow:0 15px 30px rgba(198,147,139,.25);
-}
-
-button:hover,.btn:hover{
-    transform:translateY(-4px);
-}
-
-#contenido{
-    display:none;
-}
-
-/* SECTIONS */
+/*==============================
+SECCIONES
+==============================*/
 
 .section{
-    max-width:1000px;
+
+    width:min(1100px,92%);
+
     margin:auto;
-    padding:90px 24px;
+
+    padding:110px 0;
+
+    position:relative;
+
 }
 
 .section h2{
-    font-family:'Cormorant Garamond',serif;
-    font-size:48px;
-    color:#c6938b;
+
+    font-size:54px;
+
+    color:var(--rose);
+
     margin-bottom:20px;
+
+    font-weight:500;
+
 }
 
-.section p{
-    line-height:1.9;
-    margin-bottom:14px;
+.section h3{
+
+    color:var(--rose);
+
 }
 
-.section-divider{
-    width:80px;
-    height:2px;
-    background:#d8a8b8;
-    margin:30px auto;
-}
+.lead{
 
-.lead,.count-subtitle,.gallery-text{
-    font-family:'Cormorant Garamond',serif;
     font-size:26px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:20px;
+
 }
 
-.invitation-card,
-.location-card,
-.dress-card,
-.gift-card{
-    background:#fff;
-    max-width:760px;
-    margin:auto;
-    padding:50px;
-    border-radius:28px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
+/*==============================
+DIVISOR FLORAL
+==============================*/
+
+.flower-divider{
+
+    width:90px;
+
+    height:2px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        var(--rose),
+        transparent
+    );
+
+    margin:40px auto;
+
 }
 
-.invitation-card h3{
-    margin-top:30px;
-    font-family:'Great Vibes',cursive;
-    font-size:62px;
-    color:#c6938b;
-}
-
-/* COUNTDOWN */
-
-#countdown{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-#countdown div{
-    width:120px;
-    padding:25px 15px;
-    background:#fff;
-    border-radius:22px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-#countdown span{
-    display:block;
-    font-size:36px;
-    font-weight:700;
-    color:#c6938b;
-}
-
-/* CARDS */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:24px;
-}
+/*==============================
+TARJETAS
+==============================*/
 
 .card{
-    background:#fff;
-    border-radius:25px;
-    padding:35px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-    transition:.3s;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:var(--radius);
+
+    padding:55px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
 }
 
 .card:hover{
+
     transform:translateY(-6px);
-}
-
-.icon{
-    font-size:42px;
-    margin-bottom:16px;
-}
-
-/* TICKET */
-
-.ticket{
-    width:260px;
-    margin:auto;
-    background:#fff;
-    border-radius:28px;
-    padding:35px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-}
-
-.ticket-number{
-    font-size:72px;
-    color:#c6938b;
-    font-weight:700;
-}
-
-/* GALLERY */
-
-.gallerySwiper{
-    width:100%;
-    padding:20px 0 60px;
-}
-
-.gallerySwiper img{
-    width:100%;
-    max-width:420px;
-    border-radius:28px;
-    margin:auto;
-    display:block;
-    box-shadow:0 18px 45px rgba(0,0,0,.12);
-}
-
-.swiper-button-next,
-.swiper-button-prev{
-    color:#c6938b;
-}
-
-.swiper-pagination-bullet-active{
-    background:#c6938b;
-}
-
-.final h1{
-    font-family:'Great Vibes',cursive;
-    font-size:90px;
-    color:#c6938b;
-}
-
-@media(max-width:768px){
-
-.hero h1{font-size:82px;}
-
-.hero-quote{font-size:22px;}
-
-.section{padding:70px 18px;}
-
-.section h2{font-size:38px;}
-
-.invitation-card,
-.location-card,
-.dress-card,
-.gift-card{
-padding:35px 25px;
-}
 
 }
