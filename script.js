@@ -195,3 +195,130 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setInterval(createPetal,450);
+    /*==============================================
+        SWIPER GALERÍA
+    ==============================================*/
+
+    const gallerySwiper = new Swiper(".gallerySwiper",{
+
+        loop:true,
+
+        centeredSlides:true,
+
+        spaceBetween:30,
+
+        autoplay:{
+
+            delay:3000,
+
+            disableOnInteraction:false
+
+        },
+
+        pagination:{
+
+            el:".swiper-pagination",
+
+            clickable:true
+
+        },
+
+        navigation:{
+
+            nextEl:".swiper-button-next",
+
+            prevEl:".swiper-button-prev"
+
+        },
+
+        breakpoints:{
+
+            0:{
+
+                slidesPerView:1
+
+            },
+
+            768:{
+
+                slidesPerView:2
+
+            },
+
+            1100:{
+
+                slidesPerView:3
+
+            }
+
+        }
+
+    });
+
+    /*==============================================
+        LIGHTBOX
+    ==============================================*/
+
+    const lightbox = document.getElementById("lightbox");
+
+    const lightboxImage = document.getElementById("lightboxImage");
+
+    const closeLightbox = document.getElementById("closeLightbox");
+
+    document.querySelectorAll(".gallerySwiper img").forEach(image=>{
+
+        image.addEventListener("click",()=>{
+
+            lightbox.style.display="flex";
+
+            lightboxImage.src=image.src;
+
+        });
+
+    });
+
+    closeLightbox.addEventListener("click",()=>{
+
+        lightbox.style.display="none";
+
+    });
+
+    lightbox.addEventListener("click",(e)=>{
+
+        if(e.target===lightbox){
+
+            lightbox.style.display="none";
+
+        }
+
+    });
+
+    /*==============================================
+        ANIMACIONES AL HACER SCROLL
+    ==============================================*/
+
+    const observer = new IntersectionObserver((entries)=>{
+
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("visible");
+
+            }
+
+        });
+
+    },{
+
+        threshold:0.20
+
+    });
+
+    document.querySelectorAll(".section").forEach(section=>{
+
+        section.classList.add("fade-in");
+
+        observer.observe(section);
+
+    });
