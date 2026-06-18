@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XV Años de Eva</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-<link rel="stylesheet" href="style.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>XV Años de Eva</title>
+
+    <!-- Tipografías -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- Swiper -->
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
 </head>
 
 <body>
 
+<!--=================================
+PÉTALOS
+==================================-->
+
 <div id="petals"></div>
 
+<!--=================================
+MÚSICA
+==================================-->
+
 <audio id="music" preload="auto" loop>
-    <source src="img/music/clair%20de%20lune.mp3" type="audio/mpeg">
+
+    <source src="img/music/clair%20de%20lune.mp3"
+            type="audio/mpeg">
+
 </audio>
+
+<!--=================================
+BOTÓN MÚSICA
+==================================-->
+
+<button id="musicButton"
+        class="music-btn">
+
+    ♫
+
+</button>
+
+<!--=================================
+PORTADA
+==================================-->
 
 <header class="hero">
 
@@ -27,237 +74,197 @@
 
     <div class="hero-content">
 
-        <p class="subtitle">Mis XV Años</p>
+        <p class="hero-subtitle">
 
-        <h1>EVA</h1>
+            Mis XV Años
 
-        <p class="event-date">03 · OCTUBRE · 2026</p>
+        </p>
 
-        <img src="img/portada.png" class="hero-img" alt="Eva">
+        <h1>
 
-        <blockquote class="hero-quote">
-            "Los momentos más bellos se viven junto a quienes más queremos."
+            EVA
+
+        </h1>
+
+        <div class="hero-divider"></div>
+
+        <p class="hero-date">
+
+            03 · OCTUBRE · 2026
+
+        </p>
+
+        <img src="img/portada.png"
+             alt="Eva"
+             class="hero-img">
+
+        <blockquote>
+
+            "Los momentos más bellos de la vida
+            merecen compartirse con quienes más
+            queremos."
+
         </blockquote>
 
-        <button id="openInvitation">
+        <button id="openInvitation"
+                class="open-btn">
+
             Abrir Invitación
+
         </button>
 
     </div>
 
 </header>
 
+<!--=================================
+CONTENIDO
+==================================-->
+
 <main id="contenido">
+
+<!--=================================
+BIENVENIDA
+==================================-->
 
 <section class="section welcome">
 
-    <div class="section-divider"></div>
+    <div class="flower-divider"></div>
 
-    <h2>Bienvenidos</h2>
+    <h2>
+
+        Bienvenidos
+
+    </h2>
 
     <p class="lead">
-        Hay momentos que se convierten en recuerdos para toda la vida.
+
+        Hay momentos que permanecen para siempre
+        en el corazón.
+
     </p>
 
     <p>
-        Con mucha ilusión quiero compartir contigo uno de los días más importantes de mi vida.
+
+        Hoy quiero compartir contigo la alegría
+        de celebrar uno de los días más importantes
+        de mi vida.
+
     </p>
 
     <p>
-        Gracias por acompañarme y formar parte de esta celebración tan especial.
+
+        Gracias por acompañarme y ser parte
+        de este momento tan especial.
+
     </p>
 
-    <div class="section-divider"></div>
+    <div class="flower-divider"></div>
 
 </section>
 
-<section class="section invitation">
+<!--=================================
+INVITACIÓN
+==================================-->
 
-    <h2>La Invitación</h2>
+<section class="section">
 
-    <div class="invitation-card">
+    <div class="card invitation-card">
+
+        <h2>
+
+            La Invitación
+
+        </h2>
 
         <p>
-            Con el cariño de mi familia y la emoción de celebrar una nueva etapa de mi vida,
-            tengo el honor de invitarte a compartir conmigo la celebración de mis XV años.
+
+            Con la ilusión de celebrar una nueva
+            etapa de mi vida, tengo el honor de
+            invitarte a compartir conmigo la
+            celebración de mis XV años.
+
         </p>
 
-        <h3>EVA</h3>
+        <h3>
+
+            EVA
+
+        </h3>
 
     </div>
 
 </section>
 
-<section class="section">
+<!--=================================
+CUENTA REGRESIVA
+==================================-->
 
-<h2>Cuenta regresiva</h2>
+<section class="section countdown-section">
 
-<p class="count-subtitle">
-Cada segundo nos acerca a una noche inolvidable.
-</p>
+    <h2>
 
-<div id="countdown">
+        Faltan
 
-<div><span id="days">00</span><small>Días</small></div>
-<div><span id="hours">00</span><small>Horas</small></div>
-<div><span id="minutes">00</span><small>Minutos</small></div>
-<div><span id="seconds">00</span><small>Segundos</small></div>
+    </h2>
 
-</div>
+    <p>
 
-</section>
+        Cada segundo nos acerca
+        a una noche inolvidable.
 
-<section class="section">
+    </p>
 
-<h2>El Gran Día</h2>
+    <div id="countdown">
 
-<div class="cards">
+        <div>
 
-<div class="card">
-<div class="icon">📅</div>
-<h3>Fecha</h3>
-<p>Sábado</p>
-<p><strong>3 de octubre de 2026</strong></p>
-</div>
+            <span id="days">
 
-<div class="card">
-<div class="icon">🕕</div>
-<h3>Hora</h3>
-<p><strong>6:00 PM</strong></p>
-</div>
+                00
 
-<div class="card">
-<div class="icon">🎉</div>
-<h3>Lugar</h3>
-<p>Salón Casa Azul</p>
-</div>
+            </span>
 
-</div>
+            <small>Días</small>
 
-</section>
+        </div>
 
-<section class="section">
-<h2>Lugar de la Celebración</h2>
+        <div>
 
-<div class="location-card">
-<h3>Salón Casa Azul</h3>
+            <span id="hours">
 
-<a class="btn" target="_blank"
-href="https://maps.app.goo.gl/vSsSrs8y6i6C32Zr9">
-Cómo llegar
-</a>
+                00
 
-</div>
+            </span>
 
-</section>
+            <small>Horas</small>
 
-<section class="section">
+        </div>
 
-<h2>Código de Vestimenta</h2>
+        <div>
 
-<div class="dress-card">
+            <span id="minutes">
 
-<h3>Formal</h3>
+                00
 
-<p>El color rosa está reservado para la quinceañera.</p>
+            </span>
 
-</div>
+            <small>Minutos</small>
+
+        </div>
+
+        <div>
+
+            <span id="seconds">
+
+                00
+
+            </span>
+
+            <small>Segundos</small>
+
+        </div>
+
+    </div>
 
 </section>
-
-<section class="section">
-
-<h2>Lluvia de Sobres</h2>
-
-<div class="gift-card">
-
-<p>
-Tu presencia será mi mejor regalo.
-Si deseas obsequiarme un detalle,
-agradeceré tu lluvia de sobres.
-</p>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Tus Pases</h2>
-
-<div class="ticket">
-
-<div class="ticket-number">2</div>
-
-<p>Personas</p>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Confirma tu Asistencia</h2>
-
-<a class="btn"
-target="_blank"
-href="https://wa.me/524424989435?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20años%20de%20Eva.">
-Confirmar por WhatsApp
-</a>
-
-</section>
-
-<section class="section">
-
-<h2>Mi Historia</h2>
-
-<p class="gallery-text">
-Cada fotografía guarda un recuerdo que me ha acompañado hasta este momento.
-</p>
-
-<div class="swiper gallerySwiper">
-
-<div class="swiper-wrapper">
-
-<div class="swiper-slide"><img src="img/foto1.jpg" alt=""></div>
-<div class="swiper-slide"><img src="img/foto2.jpg" alt=""></div>
-<div class="swiper-slide"><img src="img/foto3.jpg" alt=""></div>
-<div class="swiper-slide"><img src="img/foto4.png" alt=""></div>
-<div class="swiper-slide"><img src="img/foto5.png" alt=""></div>
-<div class="swiper-slide"><img src="img/foto6.jpg" alt=""></div>
-
-</div>
-
-<div class="swiper-pagination"></div>
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Comparte tus Fotos</h2>
-
-<p>Utiliza nuestro hashtag</p>
-
-<h3>#EvaXV2026</h3>
-
-</section>
-
-<section class="section final">
-
-<p>Gracias por acompañarme en este momento tan especial.</p>
-
-<h1>EVA</h1>
-
-</section>
-
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
-
-</body>
-</html>
