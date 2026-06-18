@@ -322,3 +322,114 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(section);
 
     });
+    /*==============================================
+        CERRAR LIGHTBOX CON ESC
+    ==============================================*/
+
+    document.addEventListener("keydown",(event)=>{
+
+        if(event.key==="Escape" && lightbox){
+
+            lightbox.style.display="none";
+
+        }
+
+    });
+
+    /*==============================================
+        PAUSAR SWIPER AL ABRIR LIGHTBOX
+    ==============================================*/
+
+    document.querySelectorAll(".gallerySwiper img").forEach(image=>{
+
+        image.addEventListener("click",()=>{
+
+            if(gallerySwiper.autoplay){
+
+                gallerySwiper.autoplay.stop();
+
+            }
+
+        });
+
+    });
+
+    function closeGallery(){
+
+        if(lightbox){
+
+            lightbox.style.display="none";
+
+        }
+
+        if(gallerySwiper.autoplay){
+
+            gallerySwiper.autoplay.start();
+
+        }
+
+    }
+
+    if(closeLightbox){
+
+        closeLightbox.addEventListener("click",closeGallery);
+
+    }
+
+    if(lightbox){
+
+        lightbox.addEventListener("click",(e)=>{
+
+            if(e.target===lightbox){
+
+                closeGallery();
+
+            }
+
+        });
+
+    }
+
+    /*==============================================
+        PRECARGA DE IMÁGENES
+    ==============================================*/
+
+    document.querySelectorAll(".gallerySwiper img").forEach(img=>{
+
+        const preload=new Image();
+
+        preload.src=img.src;
+
+    });
+
+    /*==============================================
+        EFECTO PARALLAX SUAVE EN PORTADA
+    ==============================================*/
+
+    window.addEventListener("mousemove",(e)=>{
+
+        if(!hero) return;
+
+        const x=(e.clientX/window.innerWidth)-0.5;
+
+        const y=(e.clientY/window.innerHeight)-0.5;
+
+        hero.style.backgroundPosition=
+
+            `${50+x*2}% ${50+y*2}%`;
+
+    });
+
+    /*==============================================
+        DETENER MÚSICA SI SE CIERRA LA PESTAÑA
+    ==============================================*/
+
+    document.addEventListener("visibilitychange",()=>{
+
+        if(document.hidden){
+
+            music.pause();
+
+        }
+
+    });
