@@ -1191,3 +1191,241 @@ img:hover{
     letter-spacing:2px;
 
 }
+/*==================================================
+    PÉTALOS
+==================================================*/
+
+#petals{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:999;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    top:-40px;
+
+    width:18px;
+
+    height:18px;
+
+    background:linear-gradient(
+        135deg,
+        #ffd8e5,
+        #e9a9ba
+    );
+
+    border-radius:70% 0 70% 0;
+
+    opacity:.75;
+
+    animation:fall linear forwards;
+
+}
+
+@keyframes fall{
+
+    from{
+
+        transform:
+            translateY(-40px)
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+            translateY(110vh)
+            translateX(80px)
+            rotate(540deg);
+
+    }
+
+}
+
+/*==================================================
+    BOTÓN DE MÚSICA
+==================================================*/
+
+.music-btn{
+
+    animation:pulseMusic 3s infinite;
+
+}
+
+@keyframes pulseMusic{
+
+    0%{
+
+        box-shadow:
+        0 0 0 0 rgba(201,154,166,.45);
+
+    }
+
+    70%{
+
+        box-shadow:
+        0 0 0 18px rgba(201,154,166,0);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 0 0 rgba(201,154,166,0);
+
+    }
+
+}
+
+.music-btn.playing{
+
+    background:var(--gold);
+
+}
+
+/*==================================================
+    PANTALLA DE CARGA
+==================================================*/
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:var(--cream);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    transition:opacity .8s ease;
+
+}
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+.loader-flower{
+
+    font-size:60px;
+
+    animation:rotateFlower 6s linear infinite;
+
+}
+
+@keyframes rotateFlower{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+.loader-content h2{
+
+    font-size:72px;
+
+    color:var(--rose);
+
+    margin-top:20px;
+
+}
+
+.loader-content p{
+
+    margin-top:10px;
+
+    letter-spacing:2px;
+
+}
+
+/*==================================================
+    DESPEDIDA
+==================================================*/
+
+.thanks{
+
+    text-align:center;
+
+    padding-bottom:140px;
+
+}
+
+.thanks h1{
+
+    font-size:100px;
+
+    color:var(--rose);
+
+    margin:20px 0;
+
+}
+
+.thanks-text{
+
+    max-width:650px;
+
+    margin:auto;
+
+    font-size:24px;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.date-final{
+
+    margin-top:15px;
+
+    letter-spacing:4px;
+
+    color:var(--rose-dark);
+
+}
+
+/*==================================================
+    EFECTO GENERAL
+==================================================*/
+
+.card,
+.ticket,
+.gallerySwiper img{
+
+    transition:.4s ease;
+
+}
+
+.card:hover,
+.ticket:hover{
+
+    transform:translateY(-8px);
+
+}
