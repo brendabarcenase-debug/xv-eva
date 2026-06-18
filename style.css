@@ -959,3 +959,235 @@ img:hover{
     transform:scale(1.02);
 
 }
+/*==================================================
+    GALERÍA
+==================================================*/
+
+.gallery-section{
+
+    text-align:center;
+
+}
+
+.gallery-text{
+
+    max-width:650px;
+
+    margin:0 auto 40px;
+
+    font-size:20px;
+
+    color:var(--text);
+
+}
+
+.gallerySwiper{
+
+    width:100%;
+
+    padding:20px 10px 70px;
+
+}
+
+.gallerySwiper .swiper-slide{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.gallerySwiper img{
+
+    width:100%;
+
+    max-width:360px;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    border:8px solid #fff;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.15);
+
+    cursor:pointer;
+
+    transition:.45s ease;
+
+}
+
+.gallerySwiper img:hover{
+
+    transform:scale(1.04);
+
+    box-shadow:0 28px 60px rgba(0,0,0,.20);
+
+}
+
+/*==================================================
+    FLECHAS SWIPER
+==================================================*/
+
+.swiper-button-next,
+.swiper-button-prev{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:var(--rose);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.10);
+
+    transition:.3s;
+
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+
+    transform:scale(1.08);
+
+    background:var(--rose);
+
+    color:white;
+
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+/*==================================================
+    PAGINACIÓN
+==================================================*/
+
+.swiper-pagination{
+
+    bottom:0 !important;
+
+}
+
+.swiper-pagination-bullet{
+
+    width:12px;
+
+    height:12px;
+
+    opacity:.4;
+
+    background:var(--rose);
+
+    transition:.3s;
+
+}
+
+.swiper-pagination-bullet-active{
+
+    opacity:1;
+
+    transform:scale(1.4);
+
+}
+
+/*==================================================
+    LIGHTBOX
+==================================================*/
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.88);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:10000;
+
+    padding:30px;
+
+}
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:90vh;
+
+    border-radius:24px;
+
+    border:8px solid white;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.40);
+
+}
+
+#closeLightbox{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    color:white;
+
+    font-size:48px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#closeLightbox:hover{
+
+    transform:scale(1.15);
+
+}
+
+/*==================================================
+    INSTAGRAM
+==================================================*/
+
+.instagram-card{
+
+    max-width:650px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.instagram-card h3{
+
+    margin-top:20px;
+
+    font-size:44px;
+
+    color:var(--rose);
+
+    letter-spacing:2px;
+
+}
