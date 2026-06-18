@@ -1429,3 +1429,272 @@ img:hover{
     transform:translateY(-8px);
 
 }
+/*==================================================
+    RESPONSIVE
+==================================================*/
+
+@media (max-width:1024px){
+
+    .section{
+
+        width:min(94%,900px);
+
+        padding:90px 0;
+
+    }
+
+    .hero h1{
+
+        font-size:100px;
+
+    }
+
+    .hero-img{
+
+        width:320px;
+
+    }
+
+    .section h2{
+
+        font-size:46px;
+
+    }
+
+}
+
+/*==============================*/
+
+@media (max-width:768px){
+
+    .hero{
+
+        padding:60px 20px;
+
+    }
+
+    .hero h1{
+
+        font-size:74px;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:16px;
+
+        letter-spacing:4px;
+
+    }
+
+    .hero-date{
+
+        font-size:24px;
+
+    }
+
+    .hero blockquote{
+
+        font-size:22px;
+
+        padding:0 10px;
+
+    }
+
+    .hero-img{
+
+        width:280px;
+
+        border-width:7px;
+
+    }
+
+    .section{
+
+        padding:75px 0;
+
+    }
+
+    .section h2{
+
+        font-size:38px;
+
+    }
+
+    .lead{
+
+        font-size:22px;
+
+    }
+
+    .card{
+
+        padding:35px 28px;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #countdown{
+
+        gap:14px;
+
+    }
+
+    #countdown div{
+
+        width:95px;
+
+        padding:20px 10px;
+
+    }
+
+    #countdown span{
+
+        font-size:34px;
+
+    }
+
+    .ticket{
+
+        max-width:280px;
+
+    }
+
+    .ticket-number{
+
+        font-size:68px;
+
+    }
+
+    .gallerySwiper img{
+
+        max-width:290px;
+
+    }
+
+    .instagram-card h3{
+
+        font-size:34px;
+
+    }
+
+    .thanks h1{
+
+        font-size:76px;
+
+    }
+
+    .thanks-text{
+
+        font-size:22px;
+
+    }
+
+    .music-btn{
+
+        width:54px;
+
+        height:54px;
+
+        right:18px;
+
+        bottom:18px;
+
+        font-size:22px;
+
+    }
+
+}
+
+/*==============================*/
+
+@media (max-width:480px){
+
+    .hero h1{
+
+        font-size:62px;
+
+    }
+
+    .hero-date{
+
+        font-size:20px;
+
+    }
+
+    .hero-img{
+
+        width:240px;
+
+    }
+
+    .hero blockquote{
+
+        font-size:20px;
+
+    }
+
+    .section h2{
+
+        font-size:32px;
+
+    }
+
+    .lead{
+
+        font-size:20px;
+
+    }
+
+    .card{
+
+        padding:28px 22px;
+
+    }
+
+    #countdown{
+
+        gap:10px;
+
+    }
+
+    #countdown div{
+
+        width:78px;
+
+        border-radius:18px;
+
+    }
+
+    #countdown span{
+
+        font-size:28px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+    .gallerySwiper img{
+
+        max-width:240px;
+
+    }
+
+    .thanks h1{
+
+        font-size:62px;
+
+    }
+
+}
