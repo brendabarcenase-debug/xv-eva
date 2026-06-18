@@ -741,3 +741,221 @@ PORTADA
     box-shadow:0 22px 45px rgba(201,154,166,.35);
 
 }
+/*==================================================
+    PASES
+==================================================*/
+
+.ticket{
+
+    max-width:320px;
+
+    margin:45px auto;
+
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #fff7f8
+    );
+
+    border-radius:28px;
+
+    padding:45px 30px;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:var(--transition);
+
+}
+
+.ticket::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:6px;
+
+    background:linear-gradient(
+        90deg,
+        var(--rose-light),
+        var(--gold),
+        var(--rose)
+    );
+
+}
+
+.ticket:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.ticket-number{
+
+    font-size:82px;
+
+    color:var(--rose);
+
+    font-weight:700;
+
+    line-height:1;
+
+    margin-bottom:12px;
+
+}
+
+.ticket p{
+
+    font-size:18px;
+
+}
+
+/*==================================================
+    RSVP
+==================================================*/
+
+.section .btn{
+
+    margin-top:25px;
+
+}
+
+.section .btn::after{
+
+    content:" ➜";
+
+    transition:.3s;
+
+}
+
+.section .btn:hover::after{
+
+    margin-left:8px;
+
+}
+
+/*==================================================
+    SEPARADORES
+==================================================*/
+
+.flower-divider{
+
+    position:relative;
+
+}
+
+.flower-divider::before{
+
+    content:"❀";
+
+    position:absolute;
+
+    left:50%;
+
+    top:-12px;
+
+    transform:translateX(-50%);
+
+    color:var(--rose);
+
+    background:var(--cream);
+
+    padding:0 14px;
+
+    font-size:18px;
+
+}
+
+/*==================================================
+    FONDOS SUAVES
+==================================================*/
+
+.welcome,
+.countdown-section,
+.gallery-section,
+.thanks{
+
+    position:relative;
+
+}
+
+.welcome::before,
+.gallery-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+            circle at top right,
+            rgba(231,199,210,.18),
+            transparent 45%
+        ),
+
+        radial-gradient(
+            circle at bottom left,
+            rgba(213,178,140,.10),
+            transparent 40%
+        );
+
+    pointer-events:none;
+
+}
+
+/*==================================================
+    ANIMACIONES
+==================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(45px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.section{
+
+    animation:fadeUp .9s ease both;
+
+}
+
+/*==================================================
+    EFECTO DE IMÁGENES
+==================================================*/
+
+img{
+
+    transition:.45s ease;
+
+}
+
+img:hover{
+
+    transform:scale(1.02);
+
+}
