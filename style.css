@@ -34,6 +34,8 @@ body{
     overflow-x:hidden;
 
     line-height:1.7;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
 
 }
 
@@ -464,7 +466,7 @@ PORTADA
 
 .music-btn:hover{
 
-    transform:scale(1.08);
+    transform:scale(1.08) rotate(10deg);
 
 }
 
