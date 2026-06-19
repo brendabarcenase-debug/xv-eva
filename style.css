@@ -335,9 +335,13 @@ PORTADA
 
 .hero-img{
 
+    display:block;
+
     width:360px;
 
     max-width:92%;
+
+    margin:40px auto;
 
     border-radius:30px;
 
