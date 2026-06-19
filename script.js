@@ -49,6 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ABRIR INVITACIÓN
     ==============================================*/
 
+    if (openButton) {
+
     openButton.addEventListener("click", () => {
 
         hero.style.display = "none";
@@ -67,7 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         musicButton.classList.add("playing");
 
-    });
+       });
+
+}
 
     /*==============================================
         BOTÓN MÚSICA
