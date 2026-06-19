@@ -424,12 +424,26 @@ document.addEventListener("DOMContentLoaded", () => {
         DETENER MÚSICA SI SE CIERRA LA PESTAÑA
     ==============================================*/
 
-    document.addEventListener("visibilitychange",()=>{
+    document.addEventListener("visibilitychange", () => {
 
-        if(document.hidden){
+    if (document.hidden) {
 
-            music.pause();
+        music.pause();
+
+    } else {
+
+        if (!music.paused) {
+
+            music.play().catch(() => {});
 
         }
 
-    });
+    }
+
+});
+
+/*==============================================
+    FIN
+==============================================*/
+
+});
