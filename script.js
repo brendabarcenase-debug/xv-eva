@@ -29,13 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
 
-            loader.style.opacity = "0";
+            if (loader) {
 
-            setTimeout(() => {
+    loader.style.opacity = "0";
 
-                loader.style.display = "none";
+    setTimeout(() => {
 
-            }, 700);
+        loader.style.display = "none";
+
+    }, 700);
+
+}
 
         }, 1200);
 
