@@ -1901,3 +1901,34 @@ img{
 /*==================================================
     FIN DEL ARCHIVO
 ==================================================*/
+/*==============================================
+    BIENVENIDA Y CONFIRMACIÓN
+==============================================*/
+
+.welcome,
+.section{
+
+    text-align:center;
+
+}
+
+.welcome p,
+.section p{
+
+    max-width:700px;
+
+    margin:0 auto 22px;
+
+    text-align:center;
+
+    line-height:1.8;
+
+}
+
+.section .btn{
+
+    display:inline-flex;
+
+    margin:20px auto 0;
+
+}
