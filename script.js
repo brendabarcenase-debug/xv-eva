@@ -207,61 +207,39 @@ document.addEventListener("DOMContentLoaded", () => {
         SWIPER GALERÍA
     ==============================================*/
 
-    const gallerySwiper = new Swiper(".gallerySwiper",{
+    const gallerySwiper = new Swiper(".gallerySwiper", {
 
-        loop:true,
+    loop: true,
 
-        centeredSlides:true,
+    centeredSlides: true,
 
-        spaceBetween:30,
+    spaceBetween: 20,
 
-        autoplay:{
+    slidesPerView: 1,
 
-            delay:3000,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
 
-            disableOnInteraction:false
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 
+    breakpoints: {
+
+        768: {
+            slidesPerView: 2,
         },
 
-        pagination:{
-
-            el:".swiper-pagination",
-
-            clickable:true
-
-        },
-
-        navigation:{
-
-            nextEl:".swiper-button-next",
-
-            prevEl:".swiper-button-prev"
-
-        },
-
-        breakpoints:{
-
-            0:{
-
-                slidesPerView:1
-
-            },
-
-            768:{
-
-                slidesPerView:2
-
-            },
-
-            1100:{
-
-                slidesPerView:3
-
-            }
-
+        1024: {
+            slidesPerView: 3,
         }
 
-    });
+    }
+
+});
 
     /*==============================================
         LIGHTBOX
