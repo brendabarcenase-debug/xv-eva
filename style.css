@@ -1932,3 +1932,42 @@ img{
     margin:20px auto 0;
 
 }
+.lightbox-arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#fff;
+
+    font-size:55px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    padding:15px;
+
+    transition:.3s;
+
+}
+
+.lightbox-arrow:hover{
+
+    transform:translateY(-50%) scale(1.15);
+
+}
+
+#prevImage{
+
+    left:25px;
+
+}
+
+#nextImage{
+
+    right:25px;
+
+}
