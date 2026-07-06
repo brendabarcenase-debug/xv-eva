@@ -242,42 +242,116 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
     /*==============================================
-        LIGHTBOX
-    ==============================================*/
+    LIGHTBOX
+==============================================*/
 
-    const lightbox = document.getElementById("lightbox");
+const lightbox = document.getElementById("lightbox");
 
-    const lightboxImage = document.getElementById("lightboxImage");
+const lightboxImage = document.getElementById("lightboxImage");
 
-    const closeLightbox = document.getElementById("closeLightbox");
+const closeLightbox = document.getElementById("closeLightbox");
 
-    document.querySelectorAll(".gallerySwiper img").forEach(image=>{
+const prevImage = document.getElementById("prevImage");
 
-        image.addEventListener("click",()=>{
+const nextImage = document.getElementById("nextImage");
 
-            lightbox.style.display="flex";
+const galleryImages = document.querySelectorAll(".gallerySwiper img");
 
-            lightboxImage.src=image.src;
+let currentImage = 0;
 
-        });
+function showImage(index){
+
+    currentImage = index;
+
+    lightboxImage.src = galleryImages[currentImage].src;
+
+}
+
+galleryImages.forEach((image,index)=>{
+
+    image.addEventListener("click",()=>{
+
+        lightbox.style.display="flex";
+
+        showImage(index);
 
     });
 
-    closeLightbox.addEventListener("click",()=>{
+});
+
+nextImage.addEventListener("click",(e)=>{
+
+    e.stopPropagation();
+
+    currentImage++;
+
+    if(currentImage>=galleryImages.length){
+
+        currentImage=0;
+
+    }
+
+    showImage(currentImage);
+
+});
+
+prevImage.addEventListener("click",(e)=>{
+
+    e.stopPropagation();
+
+    currentImage--;
+
+    if(currentImage<0){
+
+        currentImage=galleryImages.length-1;
+
+    }
+
+    showImage(currentImage);
+
+});
+
+closeLightbox.addEventListener("click",()=>{
+
+    lightbox.style.display="none";
+
+});
+
+lightbox.addEventListener("click",(e)=>{
+
+    if(e.target===lightbox){
 
         lightbox.style.display="none";
 
-    });
+    }
 
-    lightbox.addEventListener("click",(e)=>{
+});
 
-        if(e.target===lightbox){
+document.addEventListener("keydown",(event)=>{
+
+    if(lightbox.style.display==="flex"){
+
+        if(event.key==="ArrowRight"){
+
+            nextImage.click();
+
+        }
+
+        if(event.key==="ArrowLeft"){
+
+            prevImage.click();
+
+        }
+
+        if(event.key==="Escape"){
 
             lightbox.style.display="none";
 
         }
 
-    });
+    }
+
+});
 
     /*==============================================
         ANIMACIONES AL HACER SCROLL
